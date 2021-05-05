@@ -264,9 +264,9 @@ class AntColonyOptimizer:
             ax.set_xlabel("Iteration")
             ax.set_ylabel("Performance")
             ax.text(.8, .6,
-                    'Ants: {}\nEvap Rate: {}\nIntensify: {}\nAlpha: {}\nBeta: {}\nBeta Evap: {}\nChoose Best: {}\n\nFit Time: {}m{}'.format(
+                    'Ants: {}\nEvap Rate: {}\nIntensify: {}\nAlpha: {}\nBeta: {}\nBeta Evap: {}\nChoose Best: {}\n\nFit Time: {} second{}'.format(
                         self.ants, self.evaporation_rate, self.pheromone_intensification, self.heuristic_alpha,
-                        self.heuristic_beta, self.beta_evaporation_rate, self.choose_best, self.fit_time // 60,
+                        self.heuristic_beta, self.beta_evaporation_rate, self.choose_best, self.fit_time,
                         ["\nStopped Early!" if self.stopped_early else ""][0]),
                     bbox={'facecolor': 'gray', 'alpha': 0.8, 'pad': 10}, transform=ax.transAxes)
             ax.legend()

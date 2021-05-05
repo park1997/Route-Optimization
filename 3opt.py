@@ -8,8 +8,9 @@ import pandas as pd
 
 
 
-for i in range(6):
+for i in range(1,7):
     ad = "Data/PDP_TW ({}).xlsx".format(i)
+    print(ad)
     df = pd.read_excel(ad) 
     df = df[["Pos1","Pos2"]]
     coordinates_arr = np.array(df)

@@ -15,7 +15,7 @@ import math
 # 소준용 : 6
 
 
-ad = "Data/PDP_TW (2).xlsx"
+ad = "Data/PDP_TW (6).xlsx"
 df = pd.read_excel(ad) 
 df = df[["Pos1","Pos2"]]
 coordinates_arr = np.array(df)
@@ -34,6 +34,7 @@ for i in range(coordinates_arr.shape[0]):
 dist = np.array(dist,dtype = 'int')
 print(dist)
 optimizer = AntColonyOptimizer(ants=100, evaporation_rate=.1, intensification=2, alpha=1, beta=1,beta_evaporation_rate=0, choose_best=.1)
+
 
 best = optimizer.fit(dist,100)
 optimizer.plot()
